@@ -19,6 +19,7 @@ public class TodoBusinessImplMockTest {
         assertEquals(2,filteredTodos.size());
     }
 
+    
     @Test
     public void testRetrieveTodosRelatedToSpringUsingMock() {
         TodoService todoServiceMock = mock(TodoServiceStub.class);
