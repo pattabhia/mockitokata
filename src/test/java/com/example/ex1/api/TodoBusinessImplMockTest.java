@@ -3,7 +3,6 @@ package com.example.ex1.api;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -19,7 +18,6 @@ public class TodoBusinessImplMockTest {
         assertEquals(2,filteredTodos.size());
     }
 
-    
     @Test
     public void testRetrieveTodosRelatedToSpringUsingMock() {
         TodoService todoServiceMock = mock(TodoServiceStub.class);
@@ -28,5 +26,6 @@ public class TodoBusinessImplMockTest {
         TodoBusinessImpl todoBusiness = new TodoBusinessImpl(todoServiceMock);
         List<String> filteredTodos = todoBusiness.retrieveTodosRelatedToSpring("Dummy");
         assertEquals(2,filteredTodos.size());
+        verify(todoServiceMock).retrieveTodos(anyString());
     }
 }
