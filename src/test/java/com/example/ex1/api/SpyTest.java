@@ -21,7 +21,6 @@ public class SpyTest {
         assertEquals(0,arrayListSpy.size());
     }
 
-
     public void testOverideListMethod() {
         List arrayListSpy = spy(ArrayList.class);
         stub(arrayListSpy.size()).toReturn(6);
