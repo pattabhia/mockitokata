@@ -1,20 +1,15 @@
 package com.example.ex1.api;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class TodoBusinessImpl {
-
-
 
     private TodoService todoService;
 
     public TodoBusinessImpl(TodoService todoService) {
         this.todoService = todoService;
     }
-
-
 
     public List<String> retrieveTodosRelatedToSpring(String user) {
         List<String> filteredTodos = new ArrayList<>();
