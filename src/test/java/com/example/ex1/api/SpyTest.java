@@ -10,6 +10,7 @@ import static org.mockito.Mockito.*;
 
 public class SpyTest {
 
+
     @Test
     public void test() {
         List arrayListSpy = spy(ArrayList.class);
